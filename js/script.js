@@ -34,6 +34,8 @@ const showWeather = async () => {
     return errorMessage.innerText = "Blednie wpisana miejscowosc"
   }
 
+  errorMessage.style.display = "none";
+
   const weatherMain = weatherApi.main;
   const weatherWind = weatherApi.wind;
   const weatherIcon = weatherApi.weather;
