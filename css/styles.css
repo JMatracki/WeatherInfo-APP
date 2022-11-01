@@ -1,0 +1,82 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/backgroundDefault.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    color: white;
+    font-size: 12vw;
+    opacity: 70%;
+    text-align: center;
+    -webkit-text-stroke: 2px black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+    width: 95vw;
+}
+
+.weatherInfoContainer {
+    background: rgba(0, 0, 0, .3);
+    border-radius: 30px;
+}
+
+.weatherInfo {
+    color: white;
+    font-size: 3vw;
+}
+
+.weatherInfo:nth-child(1) {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 4vw;
+    font-weight: 700;
+}
+
+.downloadWeatherBtn {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.errorMessage {
+    color: white;
+    font-size: 3.5vw;
+    border: 3px solid red;
+    border-radius: 10px;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.authorInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.authorName {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.githubLogo {
+    height: 20px;
+    width: 20px;
+}
