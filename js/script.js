@@ -10,6 +10,8 @@ const errorMessage = document.querySelector("#errorMessage");
 const icon = document.querySelector("#icon");
 const weatherDescription = document.querySelector("#weatherDescription");
 
+errorMessage.style.display = "none";
+
 const getWeatherApi = async () => {
   try {
     const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + weatherInput.value + '&appid=dba3cbbbe22de845daba54e9ad2c2c0b&units=metric&lang=PL');
@@ -31,8 +33,6 @@ const showWeather = async () => {
     document.body.style.backgroundImage = "url('images/backgroundDefault.jpg')"
     return errorMessage.innerText = "Blednie wpisana miejscowosc"
   }
-  
-errorMessage.style.display = "none";
 
   const weatherMain = weatherApi.main;
   const weatherWind = weatherApi.wind;
