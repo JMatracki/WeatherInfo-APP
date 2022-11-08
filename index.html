@@ -5,46 +5,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>WeatherInfo APP</title>
 </head>
 
 <body>
-    <main>
-        <div class="container">
+    <div class="container">
+        <main class="mainContent">
+            <p class="errorMessage" id="errorMessage">Blednie wpisana miejscowosc</p>
+
             <h1 class="title">WeatherInfo</h1>
-            <input type="text" id="weatherInput" value="Warszawa">
+            <input type="text" class="weatherInput" id="weatherInput" value="Warszawa">
             <button class="downloadWeatherBtn" id="downloadWeather">Pobierz pogode</button>
 
             <div class="weatherInfoContainer" id="weatherInfoContainer">
-                <span class="weatherInfo" id="city"></span>
+                <div class="titleWrapper">
+                    <span class="weatherInfoCityText" id="city"></span>
+                    <img src="" id="icon" />
+                </div>
                 <span class="weatherInfo" id="temperature"></span>
                 <span class="weatherInfo" id="temperatureFilled"></span>
                 <span class="weatherInfo" id="windSpeed"></span>
                 <span class="weatherInfo" id="pressure"></span>
                 <span class="weatherInfo" id="weatherDescription"></span>
-                <img src="" id="icon" />
-            </div>
-            <p class="errorMessage" id="errorMessage"></p>
-        </div>
-        <script src="js/script.js"></script>
-    </main>
-</body>
 
-<footer>
-    <div class="footerContainer">
-        <p class="authorInfo">Created by <span class="authorName">&nbsp;Jakub Matracki</span></p>
-        <p class="authorInfo">
-            <a href="https://github.com/JMatracki" target=”_blank”>
-                <img class="githubLogo" src="images/github.png">
-                <span class="authorName">JMatracki</span>
-            </a>
-        </p>
+            </div>
+        </main>
+        <footer>
+            <div class="footerContainer">
+                <p class="authorInfo">Created by <span class="authorName">&nbsp;Jakub Matracki</span></p>
+                <p class="authorInfo">
+                    <a href="https://github.com/JMatracki" target=”_blank”>
+                        <img class="githubLogo" src="images/github.png">
+                        <span class="authorName">JMatracki</span>
+                    </a>
+                </p>
+            </div>
+        </footer>
     </div>
-</footer>
+    <script src="js/script.js"></script>
+</body>
 
 </html>
